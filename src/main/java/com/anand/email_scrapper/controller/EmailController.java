@@ -26,6 +26,7 @@ public class EmailController {
         emailService.scrapEmails(url, company);
         return "Scraping started for: " + company;
     }
+
     @GetMapping("/sendAllEmails")
     public void sendEmailsToAll() {
         List<Email> emails = emailRepository.findAll();
