@@ -23,9 +23,11 @@ public class EmailService {
 
             for (Element link: links){
                 String href = link.attr("href");
+
                 if(href.startsWith("mailto:")) {
                     String email = href.substring(7);
                     Email newEmail = new Email(companyName, email, url);
+
                     emailRepository.save(newEmail);
                     System.out.println("Saved Email: " +email);
                 }

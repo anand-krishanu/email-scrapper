@@ -18,9 +18,11 @@ public class EmailSendingService {
         try {
             MimeMessage message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
+
             helper.setTo(receiver);
             helper.setSubject(subject);
             helper.setText(body, true);
+
             javaMailSender.send(message);
             System.out.println("Mail sent to: " + receiver);
         }

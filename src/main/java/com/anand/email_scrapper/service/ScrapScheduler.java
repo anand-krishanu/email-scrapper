@@ -9,9 +9,9 @@ public class ScrapScheduler {
     @Autowired
     private EmailService emailService;
 
-    @Scheduled(cron = "0 0 12 * * ?")
-    public void scheduleScrap () {
-        System.out.println("Starting scheduled scrapping");
-        emailService.scrapEmails("https://chhura.com", "Chhura LLC");
-    }
+//    @Scheduled(cron = "0 0 12 * * ?")
+//    public void scheduleScrap () {
+//        System.out.println("Starting scheduled scrapping");
+//        emailService.scrapEmails("https://chhura.com", "Chhura LLC");
+//    }
 }
